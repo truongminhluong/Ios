@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct MovieData {
+    let sectionType: String
+    let Movies: [String]
+}

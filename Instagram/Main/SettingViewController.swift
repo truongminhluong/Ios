@@ -9,21 +9,43 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var viewBackground: UIView!
+    
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var view5: UIView!
+    @IBOutlet weak var view6: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    private func setupUI() {
+        setup()
+        setupGestures()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupGestures() {
+        let clickView6TapGesture = UITapGestureRecognizer(target: self, action: #selector(clickView6))
+        view6.addGestureRecognizer(clickView6TapGesture)
+        view6.isUserInteractionEnabled = true
     }
-    */
+    
+    private func setup() {
+        viewBackground.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        
+        view1.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        view2.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        view3.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        view4.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        view5.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+        view6.backgroundColor = UIColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1.0)
+    }
+    
+    @objc func clickView6() {
+        print("ookokok")
+    }
 
 }
